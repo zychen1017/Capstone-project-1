@@ -6,7 +6,7 @@ X <- xdata$X
 set.seed(66666)
 
 n <- 10; r <- 100
-b0 <- 25; b1 <- 0.5; su <- 9
+b0 <- 25; b1 <- 0.5; su <- 3
 
 b0hat <- numeric(r)
 b1hat <- numeric(r)
@@ -14,7 +14,7 @@ b1hat <- numeric(r)
 x <- rnorm(n,4,1)
 
 for (j in 1:r){
-  u <- rnorm(n,0,9)
+  u <- rnorm(n,0,3)
   y <- b0 + b1*x + u
   
   bhat <- coefficients(lm(y~x))
